@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Arial-MT';
   src: url("../assets/fonts/Arial-MT.woff"); /* Путь к файлу со шрифтом */
@@ -16,7 +17,7 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
+  background: url("") center/cover, rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
 }
@@ -128,7 +129,12 @@ body {
   min-height: 180px;  
   text-align: left;
 }
-
+.weather-row{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  gap: 10px;
+}
 .weather-error {
   margin-top: -10px;
 }

@@ -1,0 +1,19 @@
+{
+  "name": "momentumscrt",
+  "version": "1.0.0",
+  "description": "Momentum task",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glebokie/momentum.git"
+  },
+  "author": "Glebokie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Glebokie/momentum/issues"
+  },
+  "homepage": "https://github.com/Glebokie/momentum#readme"
+}
