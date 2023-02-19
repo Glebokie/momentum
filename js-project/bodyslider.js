@@ -1,18 +1,17 @@
 function bodySlider() {
     const bodyEl = document.querySelector('body')
-    let randomNum ;
+    let randomNum;
     let bgNum;
     const slideNextEl = document.querySelector('.slide-next')
     const slidePrevEl = document.querySelector('.slide-prev')
     function getRandomNum (min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
-        randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-        return randomNum
+        return Math.floor(Math.random() * (max - min + 1)) + min;
       }
-   
+      randomNum = getRandomNum(1, 20)
     let setBg = () => {  
-        bgNum = getRandomNum(1, 20)
+        bgNum = randomNum;
         bgNum = String(bgNum);
         bgNum = bgNum.padStart(2,'0')
         let greetingEl = document.querySelector('.greeting')
