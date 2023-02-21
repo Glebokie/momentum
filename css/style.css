@@ -53,7 +53,38 @@ body {
   cursor: pointer;
   transition: .3s;
 }
-
+.play-div {
+  display: flex;
+  padding: 0 0 8px 0;
+  color: #ffffffbd;
+  text-shadow:0 10px 20px 0 #0008;
+  animation: ch-color-1  3s infinite linear;
+  font-size: 13px;
+}
+@keyframes ch-color-1 {
+  0% {
+    color: #ffffffbd;
+  }
+  20% {
+    color: #ffffffbd;
+  }
+  30% {
+    color: #ffffffbd;
+  }
+  40% {
+    color: #c5b358b4;
+  }
+  60% {
+    color: #ffffffbd;
+  }
+  80% {
+    color: #c5b358b4;
+    
+  }
+  100% {
+    color: #ffffffbd;
+  }
+}
 .play-item:hover {
   opacity: 1;
 }

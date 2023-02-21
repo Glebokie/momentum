@@ -18,7 +18,7 @@ function playAudio() {
     playBtn.classList.add('pause')
      let listEl = document.querySelectorAll('.play-item')[playNum]
     listEl.classList.add('item-active')
-    
+    createText()
     
     
   }
@@ -46,6 +46,7 @@ function playNext(){
     playNum = 0
   }
   isPlay = false;
+    createText()
     playAudio()
     audio.play();
     let listEl = document.querySelectorAll('.play-item')[playNum]
@@ -62,6 +63,7 @@ function playPrev(){
     playNum = playList.length - 1
   }
     isPlay = false;
+    createText()
     playAudio()
     audio.play();
     let listEl = document.querySelectorAll('.play-item')[playNum]
@@ -86,10 +88,28 @@ function getLi() {
     li.textContent = playList[i].title
     
   }
-  
-  
+
+ 
 }
 getLi()
+
+function createDiv() {
+  
+  const playerContainer = document.querySelector('.player')
+  const title = document.createElement('div');
+  title.classList.add('play-div')
+  playerContainer.prepend(title)
+  title.textContent = 'Music Player by Glebokie'
+}
+createDiv()
+
+function createText() {
+  const title = document.querySelector('.play-div')
+  let listEl = document.querySelectorAll('.play-item')[playNum]
+  title.textContent = listEl.textContent
+  
+}
+
 
 audio.onended = function() {
   playNext();
@@ -114,7 +134,6 @@ setInterval(() => {
   );
 }, 500);
 
-//turn 128 seconds into 2:08
 function getTimeCodeFromNum(num) {
   let seconds = parseInt(num);
   let minutes = parseInt(seconds / 60);
