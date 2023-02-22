@@ -58,7 +58,7 @@ body {
   padding: 0 0 8px 0;
   color: #ffffffbd;
   text-shadow:0 10px 20px 0 #0008;
-  animation: ch-color-1  3s infinite linear;
+  animation: ch-color-1  2.5s infinite linear;
   font-size: 13px;
 }
 @keyframes ch-color-1 {

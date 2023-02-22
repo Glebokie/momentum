@@ -6,6 +6,7 @@ function weather() {
     const humidity = document.querySelector('.humidity');
     const city = document.querySelector('.city');
     async function getWeather() {  
+      try {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=2a035a4d8b17a39f0ba444cbda68e9d6&units=metric`;
         const res = await fetch(url);
         const data = await res.json();
@@ -15,7 +16,14 @@ function weather() {
         weatherDescription.textContent = data.weather[0].description;
         weatherWind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/s`;
         humidity.textContent = `Humidity: ${Math.floor(data.main.humidity)} %`;
-        }
+      } catch(e) {
+        window.alert('Unknown city')
+        temperature.textContent = ``;
+        weatherDescription.textContent = ``;
+        weatherWind.textContent = ``;
+        humidity.textContent = ``;
+      }  
+      }
         getWeather()
     
     city.addEventListener('change', getWeather)
